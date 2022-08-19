@@ -7,13 +7,13 @@ function Book(title, author, pages, read) {           // constructor
     this.pages = pages;
     this.read = read;
     this.info = function() {
-        console.log(`${title} by ${author}, ${pages} pages, ${read}`);
+        return `${title} by ${author}, ${pages} pages, ${read}`;
     }
 }
 
 const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '1080', 'read');
 
-hobbit.info();
+console.log(hobbit.info())
 
 function addBookToLibrary() {
 
