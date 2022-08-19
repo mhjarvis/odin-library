@@ -1,9 +1,19 @@
 
 let myLibrary = [];
 
-function Book() {           // constructor
-
+function Book(title, author, pages, read) {           // constructor
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.info = function() {
+        console.log(`${title} by ${author}, ${pages} pages, ${read}`);
+    }
 }
+
+const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '1080', 'read');
+
+hobbit.info();
 
 function addBookToLibrary() {
 
