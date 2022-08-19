@@ -1,1 +1,10 @@
-console.log('hello')
+
+let myLibrary = [];
+
+function Book() {           // constructor
+
+}
+
+function addBookToLibrary() {
+    
+}
