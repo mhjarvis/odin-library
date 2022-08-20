@@ -8,22 +8,44 @@
 
 .container {
     display: grid;
-    grid-template: 1fr 3fr 1fr / 1fr;
+    grid-template: 50px 10fr 25px / 1fr;
     height: 100vh;
     width: auto;
 }
 
-/* HEADER */
+/************************************************* HEADER *************************************************/
 .heading-container {
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* MAIN CONTAINER */
+.heading-wrapper {
+    display: flex;
+}
+
+.title {
+    font-size: 44px;
+    font-weight: 700;
+    padding: 0 20px 0 20px;
+    border-right: 2px solid black;
+}
+
+.control-buttons {
+    display: flex;
+    padding-left: 20px;
+}
+
+.login-section {
+    display: flex;
+}
+
+/********************************************* MAIN CONTAINER *********************************************/
 .main-container {
     background-color: red;
 }
 
-/* FOOTER CONTAINER */
+/******************************************** FOOTER CONTAINER ********************************************/
 .footer-container {
     background-color: yellow;
 }
