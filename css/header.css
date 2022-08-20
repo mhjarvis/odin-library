@@ -43,12 +43,14 @@
     width: 36px;
     font-size: 32px;
     background-color: white;
-    border: none;
+    border: 1px solid black;
+    box-shadow: 4px 4px 10px;
+    border-radius: 50%;
+
 }
 
 .control-buttons>button:hover {
-    background-color: bisque;
-    border-radius: 50%;
+    background-color: rgb(197, 197, 197);
 }
 
 /************ Login Section ************/
@@ -58,7 +60,16 @@
     margin-right: 20px;
 }
 
-.login-section>p {
+.login-section>a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-section>a:hover {
+    transform: scale(1.2);
+}
+
+.login-section>a>p {
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 20px;    
 }
