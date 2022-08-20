@@ -6,8 +6,24 @@
     font-family: 'Baskervville', serif;
 }
 
+.container {
+    display: grid;
+    grid-template: 1fr 3fr 1fr / 1fr;
+    height: 100vh;
+    width: auto;
+}
+
 /* HEADER */
+.heading-container {
+    background-color: blue;
+}
 
 /* MAIN CONTAINER */
+.main-container {
+    background-color: red;
+}
 
 /* FOOTER CONTAINER */
+.footer-container {
+    background-color: yellow;
+}
