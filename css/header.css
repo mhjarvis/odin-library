@@ -1,0 +1,25 @@
+.heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading-wrapper {
+    display: flex;
+}
+
+.title {
+    font-size: 44px;
+    font-weight: 700;
+    padding: 0 20px 0 20px;
+    border-right: 2px solid black;
+}
+
+.control-buttons {
+    display: flex;
+    padding-left: 20px;
+}
+
+.login-section {
+    display: flex;
+}

@@ -1,8 +1,11 @@
 @import url(./css/reset.css);
+@import url(./css/header.css);
+@import url(./css/body.css);
+@import url(./css/footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&display=swap');
 
 
-.body {
+body {
     font-family: 'Baskervville', serif;
 }
 
@@ -11,41 +14,4 @@
     grid-template: 50px 10fr 25px / 1fr;
     height: 100vh;
     width: auto;
-}
-
-/************************************************* HEADER *************************************************/
-.heading-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.heading-wrapper {
-    display: flex;
-}
-
-.title {
-    font-size: 44px;
-    font-weight: 700;
-    padding: 0 20px 0 20px;
-    border-right: 2px solid black;
-}
-
-.control-buttons {
-    display: flex;
-    padding-left: 20px;
-}
-
-.login-section {
-    display: flex;
-}
-
-/********************************************* MAIN CONTAINER *********************************************/
-.main-container {
-    background-color: red;
-}
-
-/******************************************** FOOTER CONTAINER ********************************************/
-.footer-container {
-    background-color: yellow;
 }
