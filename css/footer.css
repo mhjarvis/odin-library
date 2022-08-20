@@ -16,11 +16,26 @@
 }
 
 .copyright {
-    border-right: 2px solid black;
-    padding-right: 10px;
     height: 22px
 }
 
-.github {
+.mhjarvis {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    padding: 0 10px;
+    height: 22px;
+    color: black;
+}
+
+.mhjarvis:hover {
+    color: rgb(109, 109, 111);
+    font-weight: 600;
+}
+
+.mhjarvis-link {
+    text-decoration:none;
+}
+
+.github{
     height: 24px
 }
