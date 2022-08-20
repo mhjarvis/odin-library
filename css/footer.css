@@ -28,8 +28,7 @@
 }
 
 .mhjarvis:hover {
-    color: rgb(109, 109, 111);
-    font-weight: 600;
+    transform: scale(1.2);
 }
 
 .mhjarvis-link {
@@ -37,5 +36,10 @@
 }
 
 .github{
-    height: 24px
+    height: 24px;
+    transition: all 0.3s;
+}
+
+.github:hover {
+    transform: scale(1.2) rotate(360deg);
 }
