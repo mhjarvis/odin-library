@@ -1,13 +1,17 @@
+/************ Container ************/
+
 .heading-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/************ Wrapper ************/
 .heading-wrapper {
     display: flex;
 }
 
+/************ Title ************/
 .title {
     font-size: 44px;
     font-weight: 700;
@@ -15,6 +19,7 @@
     border-right: 2px solid black;
 }
 
+/************ Add/Remove Buttons ************/
 .control-buttons {
     display: flex;
     padding-left: 20px;
@@ -23,3 +28,5 @@
 .login-section {
     display: flex;
 }
+
+/************ Login Section ************/
