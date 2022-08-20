@@ -6,14 +6,15 @@ function Book(title, author, pages, read) {           // constructor
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.info = function() {
-        return `${title} by ${author}, ${pages} pages, ${read}`;
-    }
+}
+
+Book.prototype.info = function() {     // make functions protos so they are not created for every object
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
 const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '1080', 'read');
 
-console.log(hobbit.info())
+
 
 function addBookToLibrary() {
 
