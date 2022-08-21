@@ -1,5 +1,11 @@
 
-let myLibrary = [];
+let myLibrary = [
+    {title: 'The Hobbit',
+     author: 'J.R.R. Tolkien',
+     pages: 847,
+     read: 'read',
+    }
+];
 
 function Book(title, author, pages, read) {           // constructor
     this.title = title;
@@ -8,17 +14,35 @@ function Book(title, author, pages, read) {           // constructor
     this.read = read;
 }
 
-Book.prototype.info = function() {     // make functions protos so they are not created for every object
+Book.prototype.info = function () {     // make functions protos so they are not created for every object
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
-const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', '1080', 'read');
+const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1080, 'read');
+const mobyDick = new Book('Moby Dick', 'Herman Melvile', 794, 'not read')
+myLibrary.push(theHobbit);
+myLibrary.push(mobyDick);
 
-
+console.log(myLibrary[0].title);
+console.log(theHobbit.info());
+console.log(mobyDick.info());
 
 function addBookToLibrary() {
 
 }
+
+
+/* Create Form Element */
+const main_container = document.querySelector('.main-container');
+
+const div = document.createElement('div');
+div.classList.add('book');
+div.id = 'box-0';
+
+main_container.appendChild(div);
+
+
+
 
 /*
 
