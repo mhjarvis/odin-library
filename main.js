@@ -33,14 +33,14 @@ function addBookToLibrary() {
 
 
 /* Create Form Element */
-const main_container = document.querySelector('.main-container');
+/* const main_container = document.querySelector('.main-container');
 
 const div = document.createElement('div');
 div.classList.add('book');
 div.id = 'box-0';
 
 main_container.appendChild(div);
-
+ */
 
 
 
