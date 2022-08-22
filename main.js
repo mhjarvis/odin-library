@@ -31,6 +31,26 @@ function addBookToLibrary() {
 
 }
 
+const addButton = document.querySelector('.add-book');                  // + button in header
+const removeButton = document.querySelector('.remove-book');            // - button in header
+const formContainer = document.querySelector('.form-container');        // main container
+const submitButton = document.querySelector('#submit-button');
+const theTitle = document.querySelector('#the_title');
+
+/********* Event Listeners To Add/Remove Buttons *********/
+
+addButton.addEventListener("click", function() {
+    formContainer.style.visibility = 'visible';
+});
+removeButton.addEventListener("click", function() {
+    formContainer.style.visibility = 'hidden';
+});
+
+submitButton.addEventListener("click", function() {
+    console.log("Hello");
+});
+
+
 
 /* Create Form Element */
 /* const main_container = document.querySelector('.main-container');
