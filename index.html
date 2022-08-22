@@ -11,13 +11,13 @@
 
     <!-- Form Element -->
     <div class="form-container">
-        <form method="post" name="add_book" class=".add_book">
+        <form method="post" name="add_book" class="add_book">
             <fieldset>
-                <legend>Add A Book</legend>
-                <input type="text" id="the_title" name="the_title" placeholder="Title" size="30" required>
-                <input type="text" id="the_author" name="the_author" placeholder="Author" size="30" required>
-                <input type="number" id="the_pages" name="the_pages" placeholder="Pages" size="30" required>
-                <p>
+                <legend id="legend">Add A Book</legend>
+                <input type="text" id="the_title" class="text-input" name="the_title" placeholder="Title" size="30" required>
+                <input type="text" id="the_author" class="text-input" name="the_author" placeholder="Author" size="30" required>
+                <input type="number" id="the_pages" class="text-input" name="the_pages" placeholder="Pages" size="30" required>
+                <p class="checkbox-wrapper">
                     <label>Have you read it?</label>
                     <input type="checkbox" id="checkbox_read" name="has_read" value="read">Yes
                     <input type="checkbox" id="checkbox_not_read" name="has_read" value="not read">No
