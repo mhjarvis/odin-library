@@ -8,13 +8,15 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     background-color: green;
 }
 
 .book {
     background-color: azure;
     height: 300px;
-    width: 400px;
+    width: 350px;
+    margin: 20px;
 }
 

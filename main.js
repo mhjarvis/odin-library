@@ -40,16 +40,39 @@ function displayLibrary() {
 
     for(let i = 0; i < myLibrary.length; i++) {             // loop through myLibrary array
 
+        // Add book container to main element
         const div = document.createElement('div');
         div.classList.add('book');
         div.id = `book-${i}`;
-        
         mainContainer.appendChild(div);
 
-        console.log(myLibrary[i].title);
+        // Add const variables for creating individual divs
+        const bookContainer = document.getElementById(`book-${i}`);
+        const titleDiv = document.createElement('div');
+        const authorDiv = document.createElement('div');
+        const pagesDiv = document.createElement('div');
+        const readDiv = document.createElement('div');
+
+        // Create title div and add to book container
+        titleDiv.classList.add('title-div');
+        titleDiv.innerHTML = myLibrary[i].title;
+        bookContainer.appendChild(titleDiv);
+
+        // Create author div and add to book container
+        authorDiv.classList.add('author-div');
+        authorDiv.innerHTML = myLibrary[i].author;
+        bookContainer.appendChild(authorDiv);
+
+        // Create pages div and add to book container
+        pagesDiv.classList.add('pages-div');
+        pagesDiv.innerHTML = myLibrary[i].pages;
+        bookContainer.appendChild(pagesDiv);
+
+        // Create read div and add to book container
+        readDiv.classList.add('read-div');
+        readDiv.innerHTML = myLibrary[i].read;
+        bookContainer.appendChild(readDiv);
     }
-
-
 }
 
 displayLibrary();
