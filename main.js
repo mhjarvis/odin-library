@@ -14,17 +14,10 @@ Book.prototype.info = function () {     // make functions protos so they are not
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
-/* const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1080, 'read');
-const mobyDick = new Book('Moby Dick', 'Herman Melvile', 794, 'not read')
-myLibrary.push(theHobbit);
-myLibrary.push(mobyDick);
-
-console.log(myLibrary[0].title);
-console.log(theHobbit.info());
-console.log(mobyDick.info()); */
-
-function addBookToLibrary() {
-
+function addBookToLibrary(title, author, pages, read) {
+    const temp = new Book(title, author, pages, read);
+    myLibrary.push(temp);
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 }
 
 
@@ -48,13 +41,19 @@ removeButton.addEventListener("click", function() {
 });
 
 submitButton.addEventListener("click", function() {
-    const temp = new Book(title.value, author.value, pages.value, read.checked);
-    myLibrary.push(temp);
-    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-
+    addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
 
+/*********
 
+/* const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1080, 'read');
+const mobyDick = new Book('Moby Dick', 'Herman Melvile', 794, 'not read')
+myLibrary.push(theHobbit);
+myLibrary.push(mobyDick);
+
+console.log(myLibrary[0].title);
+console.log(theHobbit.info());
+console.log(mobyDick.info()); */
 
 /* Create Form Element */
 /* const main_container = document.querySelector('.main-container');
