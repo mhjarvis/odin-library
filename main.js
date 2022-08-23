@@ -1,5 +1,6 @@
 
-let myLibrary = [];
+let myLibrary = JSON.parse(localStorage.getItem("myLibrary")) || [];
+console.log(myLibrary);
 
 
 function Book(title, author, pages, read) {           // constructor
@@ -26,6 +27,7 @@ function addBookToLibrary() {
 
 }
 
+
 const addButton = document.querySelector('.add-book');                  // + button in header
 const removeButton = document.querySelector('.remove-book');            // - button in header
 const formContainer = document.querySelector('.form-container');        // main container
@@ -34,7 +36,7 @@ const submitButton = document.querySelector('#submit-button');
 const title = document.querySelector('#the_title');
 const author = document.querySelector('#the_author');
 const pages = document.querySelector('#the_pages');
-const read = document.querySelector('#checkbox_read').checked;
+const read = document.querySelector('#checkbox_read');
 
 /********* Event Listeners To Add/Remove Buttons *********/
 
@@ -46,12 +48,13 @@ removeButton.addEventListener("click", function() {
 });
 
 submitButton.addEventListener("click", function() {
-    const temp = new Book(title, author, pages, read);
+    const temp = new Book(title.value, author.value, pages.value, read.checked);
+    myLibrary.push(temp);
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 
 })
 
 
-console.log(myLibrary);
 
 /* Create Form Element */
 /* const main_container = document.querySelector('.main-container');
