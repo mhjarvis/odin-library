@@ -1,11 +1,6 @@
 
-let myLibrary = [
-    {title: 'The Hobbit',
-     author: 'J.R.R. Tolkien',
-     pages: 847,
-     read: 'read',
-    }
-];
+let myLibrary = [];
+
 
 function Book(title, author, pages, read) {           // constructor
     this.title = title;
@@ -18,14 +13,14 @@ Book.prototype.info = function () {     // make functions protos so they are not
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
-const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1080, 'read');
+/* const theHobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 1080, 'read');
 const mobyDick = new Book('Moby Dick', 'Herman Melvile', 794, 'not read')
 myLibrary.push(theHobbit);
 myLibrary.push(mobyDick);
 
 console.log(myLibrary[0].title);
 console.log(theHobbit.info());
-console.log(mobyDick.info());
+console.log(mobyDick.info()); */
 
 function addBookToLibrary() {
 
@@ -35,7 +30,11 @@ const addButton = document.querySelector('.add-book');                  // + but
 const removeButton = document.querySelector('.remove-book');            // - button in header
 const formContainer = document.querySelector('.form-container');        // main container
 const submitButton = document.querySelector('#submit-button');
-const theTitle = document.querySelector('#the_title');
+
+const title = document.querySelector('#the_title');
+const author = document.querySelector('#the_author');
+const pages = document.querySelector('#the_pages');
+const read = document.querySelector('#checkbox_read').checked;
 
 /********* Event Listeners To Add/Remove Buttons *********/
 
@@ -47,10 +46,12 @@ removeButton.addEventListener("click", function() {
 });
 
 submitButton.addEventListener("click", function() {
-    console.log("Hello");
-});
+    const temp = new Book(title, author, pages, read);
+
+})
 
 
+console.log(myLibrary);
 
 /* Create Form Element */
 /* const main_container = document.querySelector('.main-container');

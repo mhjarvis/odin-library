@@ -11,7 +11,7 @@
 
     <!-- Form Element -->
     <div class="form-container">
-        <form method="post" name="add_book" id="add_book" class="add_book">
+        <form method="" name="add_book" id="add_book" class="add_book">
             <fieldset>
                 <legend id="legend">Add A Book</legend>
                 <input type="text" id="the_title" class="text-input" name="the_title" placeholder="Title..." size="30" required>
@@ -20,11 +20,11 @@
                 <div class="checkbox-wrapper">
                     <label id="checkbox-label">Have you read it?</label>
                     <div class="checkbox-div">
-                        <input type="checkbox" id="checkbox_read" name="has_read" value="read"><label for="checkbox_read" id="checkbox-read-yes">Yes</label>
+                        <input type="checkbox" id="checkbox_read" name="has_read" value="read"><label for="checkbox_read">Yes</label>
                     </div>
-                    <div>
+<!--                     <div>
                         <input type="checkbox" id="checkbox_not_read" name="has_read" value="not read"><label for="checkbox_not_read" id="checkbox-read-no">No</label>                        
-                    </div>
+                    </div> -->
                 </div>
                 <button type="submit" form="add_book" id="submit-button">Submit</button>
             </fieldset>
