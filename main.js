@@ -14,6 +14,7 @@ Book.prototype.info = function () {     // make functions protos so they are not
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
 }
 
+
 function addBookToLibrary(title, author, pages, read) {
     const temp = new Book(title, author, pages, read);
     myLibrary.push(temp);
@@ -30,6 +31,27 @@ const title = document.querySelector('#the_title');
 const author = document.querySelector('#the_author');
 const pages = document.querySelector('#the_pages');
 const read = document.querySelector('#checkbox_read');
+
+
+/********* Display Library on Page *********/
+const mainContainer = document.querySelector('.main-container');
+
+function displayLibrary() {
+    const div = document.createElement('div');
+
+    for(let i = 0; i < myLibrary.length; i++) {             // loop through myLibrary array
+        console.log(myLibrary[i].title);
+
+        div.classList.add('book');
+        div.id = 'box-0';
+
+        main_container.appendChild(div);
+    }
+
+
+}
+
+displayLibrary();
 
 /********* Event Listeners To Add/Remove Buttons *********/
 
