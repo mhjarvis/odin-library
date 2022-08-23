@@ -52,26 +52,37 @@ function displayLibrary() {
         const authorDiv = document.createElement('div');
         const pagesDiv = document.createElement('div');
         const readDiv = document.createElement('div');
+        const button = document.createElement('button');
 
         // Create title div and add to book container
         titleDiv.classList.add('title-div');
+        titleDiv.classList.add('book-info')
         titleDiv.innerHTML = myLibrary[i].title;
         bookContainer.appendChild(titleDiv);
 
         // Create author div and add to book container
         authorDiv.classList.add('author-div');
+        authorDiv.classList.add('book-info');
         authorDiv.innerHTML = myLibrary[i].author;
         bookContainer.appendChild(authorDiv);
 
         // Create pages div and add to book container
         pagesDiv.classList.add('pages-div');
+        pagesDiv.classList.add('book-info')
         pagesDiv.innerHTML = myLibrary[i].pages;
         bookContainer.appendChild(pagesDiv);
 
         // Create read div and add to book container
         readDiv.classList.add('read-div');
+        readDiv.classList.add('book-info')
         readDiv.innerHTML = myLibrary[i].read;
         bookContainer.appendChild(readDiv);
+
+        // Create remove book button
+        button.classList.add('remove-button');
+        button.id = `remove-button-${i}`;
+        button.innerHTML = 'Remove Book';
+        bookContainer.appendChild(button);
     }
 }
 
