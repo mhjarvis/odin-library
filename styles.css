@@ -6,8 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville&family=IM+Fell+English+SC&family=Rye&display=swap');
 
 * { 
-/*      outline: 1px solid red;
- */}
+     outline: 1px solid red;
+}
 
 body {
     font-family: 'IM Fell English SC', serif;

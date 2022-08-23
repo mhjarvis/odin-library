@@ -34,18 +34,19 @@ const read = document.querySelector('#checkbox_read');
 
 
 /********* Display Library on Page *********/
-const mainContainer = document.querySelector('.main-container');
+const mainContainer = document.querySelector('.book-container');
 
 function displayLibrary() {
-    const div = document.createElement('div');
 
     for(let i = 0; i < myLibrary.length; i++) {             // loop through myLibrary array
-        console.log(myLibrary[i].title);
 
+        const div = document.createElement('div');
         div.classList.add('book');
-        div.id = 'box-0';
+        div.id = `book-${i}`;
+        
+        mainContainer.appendChild(div);
 
-        main_container.appendChild(div);
+        console.log(myLibrary[i].title);
     }
 
 
