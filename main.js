@@ -80,11 +80,11 @@ function displayLibrary() {
         bookContainer.appendChild(pagesDiv);
 
         /* Create read div and add to book container */
-        const readDiv = document.createElement('div');
-        readDiv.classList.add('read-div');
-        readDiv.classList.add('book-info')
-        readDiv.innerHTML = myLibrary[i].read;
-        bookContainer.appendChild(readDiv);
+        const readButton = document.createElement('button');
+        readButton.id = ('read-button-' + i);
+        readButton.classList.add('read-button')
+        readButton.innerHTML = myLibrary[i].read;
+        bookContainer.appendChild(readButton);
 
         /* Create remove book button */
         const button = document.createElement('button');

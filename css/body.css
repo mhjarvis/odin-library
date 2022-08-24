@@ -35,17 +35,13 @@
     justify-content: center;
     font-size: 24px;
     color: white;
-    border-bottom: 1px solid;
-    width: 100%;
+/*     border-bottom: 1px solid;
+ */    width: 100%;
 }
 
-.book-info, #delete-book-button {
-    height: 60px;
-}
-
-.remove-button {
+.read-button {
     height: 40px;
-    width: 160px;
+    width: 200px;
     margin: 10px;
     border-radius: 20px;
     border: none;
@@ -56,6 +52,23 @@
     font-family: 'IM Fell English SC', serif;
 }
 
-.remove-button:hover {
-    background-color: rgb(51, 51, 51);
+.book-info, #delete-book-button {
+    height: 60px;
+}
+
+.remove-button {
+    height: 40px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: rgb(1, 3, 7);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'IM Fell English SC', serif;
+}
+
+.remove-button:hover, .read-button:hover {
+    background-color: rgb(133, 133, 133);
 }
