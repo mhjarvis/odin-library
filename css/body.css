@@ -25,6 +25,11 @@
     justify-content: center;
 }
 
+.book:hover {
+position: fixed;
+margin: -5px 0 0 0;
+}
+
 .book-info {
     display: flex;
     align-items: center;
