@@ -16,9 +16,18 @@ Book.prototype.info = function () {     // make functions protos so they are not
 
 
 function addBookToLibrary(title, author, pages, read) {
+    if(read) {
+        read = 'Read';
+    } else {
+        read = 'Not Read';
+    }
     const temp = new Book(title, author, pages, read);
     myLibrary.push(temp);
     localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+}
+
+function removeBookFromLibrary() {
+
 }
 
 
@@ -26,6 +35,7 @@ const addButton = document.querySelector('.add-book');                  // + but
 const removeButton = document.querySelector('.remove-book');            // - button in header
 const formContainer = document.querySelector('.form-container');        // main container
 const submitButton = document.querySelector('#submit-button');
+const removeBookButton = document.querySelector('#delete-book-button');
 
 const title = document.querySelector('#the_title');
 const author = document.querySelector('#the_author');
@@ -80,7 +90,7 @@ function displayLibrary() {
 
         // Create remove book button
         button.classList.add('remove-button');
-        button.id = 'delete-book-button';
+        button.id = 'delete-book-button' + i;
         button.innerHTML = 'Remove';
         bookContainer.appendChild(button);
     }
@@ -100,6 +110,12 @@ removeButton.addEventListener("click", function() {
 submitButton.addEventListener("click", function() {
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
+
+removeBookButton.addEventListener("click", function() {
+    console.log(this.id.value);
+})
+
+
 
 /*********
 
