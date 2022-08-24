@@ -77,7 +77,7 @@ function displayLibrary() {
         const pagesDiv = document.createElement('div');
         pagesDiv.classList.add('pages-div');
         pagesDiv.classList.add('book-info')
-        pagesDiv.innerHTML = myLibrary[i].pages;
+        pagesDiv.innerHTML = myLibrary[i].pages + " pages";
         bookContainer.appendChild(pagesDiv);
 
         /* Create read div and add to book container */
@@ -130,9 +130,9 @@ addButton.addEventListener("click", function() {        // displays form
     formContainer.style.visibility = 'visible';
 });
 
-removeButton.addEventListener("click", function() {     // not needed (DELETE)
+/* removeButton.addEventListener("click", function() {     // not needed (DELETE)
     formContainer.style.visibility = 'hidden';
-});
+}); */
 
 submitButton.addEventListener("click", function() {     // submits form and creates book
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
