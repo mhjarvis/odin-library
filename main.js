@@ -26,8 +26,10 @@ function addBookToLibrary(title, author, pages, read) {
     localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
 }
 
-function removeBookFromLibrary() {
-
+function removeBookFromLibrary(val) {
+    myLibrary.splice(val, 1);
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+    displayLibrary();
 }
 
 
@@ -35,7 +37,7 @@ const addButton = document.querySelector('.add-book');                  // + but
 const removeButton = document.querySelector('.remove-book');            // - button in header
 const formContainer = document.querySelector('.form-container');        // main container
 const submitButton = document.querySelector('#submit-button');
-const removeBookButton = document.querySelector('#delete-book-button');
+const removeBookButton = document.querySelector('.remove-button');
 
 const title = document.querySelector('#the_title');
 const author = document.querySelector('#the_author');
@@ -48,6 +50,7 @@ const mainContainer = document.querySelector('.book-container');
 
 function displayLibrary() {
 
+    JSON.parse(localStorage.getItem("myLibrary"))
     for(let i = 0; i < myLibrary.length; i++) {             // loop through myLibrary array
 
         // Add book container to main element
@@ -92,6 +95,19 @@ function displayLibrary() {
         button.classList.add('remove-button');
         button.id = 'delete-book-button' + i;
         button.innerHTML = 'Remove';
+        button.value = i;
+
+        button.addEventListener("click", function() {
+            console.log(button.value);
+
+            JSON.parse(localStorage.getItem("myLibrary"))
+
+            removeBookFromLibrary(button.value);
+
+            localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+
+        })
+
         bookContainer.appendChild(button);
     }
 }
@@ -111,9 +127,7 @@ submitButton.addEventListener("click", function() {
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
 
-removeBookButton.addEventListener("click", function() {
-    console.log(this.id.value);
-})
+
 
 
 
