@@ -49,7 +49,7 @@ const read = document.querySelector('#checkbox_read');
 const mainContainer = document.querySelector('.book-container');
 
 function displayLibrary() {
-
+    mainContainer.innerHTML = '';
     JSON.parse(localStorage.getItem("myLibrary"))
     for(let i = 0; i < myLibrary.length; i++) {             // loop through myLibrary array
 
@@ -100,7 +100,7 @@ function displayLibrary() {
         button.addEventListener("click", function() {
             console.log(button.value);
 
-            JSON.parse(localStorage.getItem("myLibrary"))
+            myLibrary = JSON.parse(localStorage.getItem("myLibrary"))
 
             removeBookFromLibrary(button.value);
 
