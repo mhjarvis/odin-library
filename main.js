@@ -29,8 +29,6 @@ function removeBookFromLibrary(index) {
     displayLibrary();                                                   // rebuild book container
 }
 
-
-
 /* HTML query selectors to be reused */
 const addButton = document.querySelector('.add-book');                  // header div
 const removeButton = document.querySelector('.remove-book');            // header div
@@ -85,12 +83,14 @@ function displayLibrary() {
         readButton.id = ('read-button-' + i);
         readButton.classList.add('read-button')
         readButton.innerHTML = myLibrary[i].read;
+            // set initial button background-color
             if(myLibrary[i].read == 'Read') {
                 readButton.style.backgroundColor = 'rgb(66, 177, 75)';
             } else {
                 readButton.style.backgroundColor = 'rgb(202, 78, 78)';
             }
 
+        // Add event listener to each button for status change
         readButton.addEventListener("click", function() {
             if(myLibrary[i].read == 'Read') {
                 myLibrary[i].read = 'Not Read';
@@ -102,8 +102,7 @@ function displayLibrary() {
                 displayLibrary();
             }
         })
-
-        bookContainer.appendChild(readButton);
+        bookContainer.appendChild(readButton);  // append button to each div
 
         /* Create remove book button */
         const button = document.createElement('button');
@@ -118,33 +117,17 @@ function displayLibrary() {
             removeBookFromLibrary(button.value);                            // remove book function
             localStorage.setItem("myLibrary", JSON.stringify(myLibrary));   // save object
         })
-
         bookContainer.appendChild(button);      // append button to each book div
     }
 }
 
-displayLibrary();
+displayLibrary();       // initialize display
 
 /* Event listeners for form controls */
 addButton.addEventListener("click", function() {        // displays form
     formContainer.style.visibility = 'visible';
 });
 
-/* removeButton.addEventListener("click", function() {     // not needed (DELETE)
-    formContainer.style.visibility = 'hidden';
-}); */
-
 submitButton.addEventListener("click", function() {     // submits form and creates book
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
-
-
-
-
-/*
-
-5. Add a button on each book’s display to change its read status.
-
-6. To facilitate this you will want to create the function that toggles a book’s read status on your Book prototype instance.
-
-*/
