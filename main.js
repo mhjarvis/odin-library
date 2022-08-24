@@ -10,8 +10,7 @@ function Book(title, author, pages, read) {
 }
 
 /* Function to add new book to library; save to storage after adding */
-function addBookToLibrary(title, author, pages, read) {
-
+function addBookToLibrary(title, author, pages, read, id) {
     if(read) {                  // convert true/false values to readable input for user
         read = 'Read';
     } else {
@@ -29,6 +28,8 @@ function removeBookFromLibrary(index) {
     localStorage.setItem("myLibrary", JSON.stringify(myLibrary));       // save new array to storage
     displayLibrary();                                                   // rebuild book container
 }
+
+
 
 /* HTML query selectors to be reused */
 const addButton = document.querySelector('.add-book');                  // header div
@@ -84,6 +85,24 @@ function displayLibrary() {
         readButton.id = ('read-button-' + i);
         readButton.classList.add('read-button')
         readButton.innerHTML = myLibrary[i].read;
+            if(myLibrary[i].read == 'Read') {
+                readButton.style.backgroundColor = 'rgb(66, 177, 75)';
+            } else {
+                readButton.style.backgroundColor = 'rgb(202, 78, 78)';
+            }
+
+        readButton.addEventListener("click", function() {
+            if(myLibrary[i].read == 'Read') {
+                myLibrary[i].read = 'Not Read';
+                readButton.backgroundColor = 'rgb(66, 177, 75)';
+                displayLibrary();
+            } else {
+                myLibrary[i].read = 'Read';
+                readButton.backgroundColor = 'rgb(202, 78, 78)';
+                displayLibrary();
+            }
+        })
+
         bookContainer.appendChild(readButton);
 
         /* Create remove book button */
@@ -92,7 +111,7 @@ function displayLibrary() {
         button.id = 'delete-book-button' + i;
         button.innerHTML = 'Remove';
         button.value = i;
-
+    
         /* Add event listener with button to remove book */
         button.addEventListener("click", function() {
             myLibrary = JSON.parse(localStorage.getItem("myLibrary"))       // retrieve object
