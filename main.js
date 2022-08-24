@@ -80,8 +80,8 @@ function displayLibrary() {
 
         // Create remove book button
         button.classList.add('remove-button');
-        button.id = `remove-button-${i}`;
-        button.innerHTML = 'Remove Book';
+        button.id = 'delete-book-button';
+        button.innerHTML = 'Remove';
         bookContainer.appendChild(button);
     }
 }
