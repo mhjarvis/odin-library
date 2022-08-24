@@ -60,6 +60,10 @@
     background-color: rgb(197, 197, 197);
 }
 
+.add-book-label {
+    color: white;
+    font-size: 22px;
+}
 /************ Login Section ************/
 .login-section {
     display: flex;
