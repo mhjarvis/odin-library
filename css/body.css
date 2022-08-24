@@ -26,8 +26,7 @@
 }
 
 .book:hover {
-position: fixed;
-margin: -5px 0 0 0;
+    box-shadow: 5px 5px 2rem;
 }
 
 .book-info {
@@ -50,9 +49,10 @@ margin: -5px 0 0 0;
     margin: 10px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(1, 3, 7);
-    color: white;
-    font-size: 20px;
+    background-color: white;
+    color: rgb(1, 3, 7);
+    font-size: 24px;
+    font-weight: 700;
     font-family: 'IM Fell English SC', serif;
 }
 
