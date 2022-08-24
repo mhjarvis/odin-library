@@ -1,6 +1,7 @@
 .main-container {
     height: 100%;
     width: 100%;
+    background-color: rgb(177, 244, 252)
 }
 
 .book-container {
@@ -9,21 +10,24 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
-    background-color: rgb(82, 59, 59);
 }
 
 .book {
-    background-color: rgb(158, 167, 184);
+    background-color: rgb(57, 84, 97);
     height: 300px;
-    width: 350px;
+    width: 270px;
     margin: 20px;
+    border-radius: 20px;
+    border: none;
 }
 
 .book-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 24px;
     height: 20%;
+    color: white;
+    border-bottom: 1px solid;
 }
 
