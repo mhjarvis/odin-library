@@ -12,6 +12,7 @@
     justify-content: center;
     background-color: rgb(244, 212, 153);
     visibility: hidden;
+    z-index: 1;
 }
 
 /* Form elements */
@@ -46,6 +47,14 @@
 .text-input {
     font-size: 16px;
     border: none;
+    text-indent: 10px;
+}
+
+.text-input:focus {
+    font-size: 16px;
+    color: black;
+    text-indent: 20px;
+    font-family: 'IM Fll English SC', serif;
 }
 
 .checkbox-wrapper {

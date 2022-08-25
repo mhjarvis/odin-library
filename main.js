@@ -126,8 +126,14 @@ displayLibrary();       // initialize display
 /* Event listeners for form controls */
 addButton.addEventListener("click", function() {        // displays form
     formContainer.style.visibility = 'visible';
+    const body = document.querySelector('body');
+    const div = document.createElement('div');
+    div.id = 'black-background';
+    body.appendChild(div);
 });
 
 submitButton.addEventListener("click", function() {     // submits form and creates book
+    const element = document.querySelector('#black-background');
+    element.remove();
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
