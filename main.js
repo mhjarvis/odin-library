@@ -61,7 +61,7 @@ function displayLibrary() {
         const titleDiv = document.createElement('div');
         titleDiv.classList.add('title-div');
         titleDiv.classList.add('book-info')
-        titleDiv.innerHTML = myLibrary[i].title;
+        titleDiv.innerHTML = "`" + myLibrary[i].title + "`";
         bookContainer.appendChild(titleDiv);
 
         /* Create author div and add to book container */
