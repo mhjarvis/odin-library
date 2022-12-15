@@ -137,3 +137,10 @@ submitButton.addEventListener("click", function() {     // submits form and crea
     element.remove();
     addBookToLibrary(title.value, author.value, pages.value, read.checked);
 })
+
+
+
+/***********************************************
+*************** FORM VALIDATION ****************
+***********************************************/
+
