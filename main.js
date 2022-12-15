@@ -144,3 +144,14 @@ submitButton.addEventListener("click", function() {     // submits form and crea
 *************** FORM VALIDATION ****************
 ***********************************************/
 
+const the_title = document.getElementById('the_title');
+const the
+
+the_title.addEventListener("input", (event) => {
+  if(the_title.validity.valueMissing) {
+    the_title.setCustomValidity("Please fill in all values");
+    the_title.reportValidity();
+  } else {
+    the_title.setCustomValidity("");
+  }
+});
