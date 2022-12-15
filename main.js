@@ -146,6 +146,7 @@ submitButton.addEventListener("click", function() {     // submits form and crea
 
 const the_title = document.getElementById('the_title');
 const the_author = document.querySelector('#the_author');
+const the_pages = document.querySelector('#the_pages')
 
 the_title.addEventListener("input", (event) => {
   if(the_title.validity.valueMissing) {
@@ -162,5 +163,14 @@ the_author.addEventListener("input", (event) => {
     the_author.reportValidity();
   } else {
     the_author.setCustomValidity("");
+  }
+});
+
+the_pages.addEventListener("input", (event) => {
+  if(the_pages.validity.valueMissing) {
+    the_pages.setCustomValidity("Please enter the number of pages");
+    the_pages.reportValidity();
+  } else {
+    the_pages.setCustomValidity("");
   }
 });
