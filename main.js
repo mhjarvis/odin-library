@@ -145,13 +145,22 @@ submitButton.addEventListener("click", function() {     // submits form and crea
 ***********************************************/
 
 const the_title = document.getElementById('the_title');
-const the
+const the_author = document.querySelector('#the_author');
 
 the_title.addEventListener("input", (event) => {
   if(the_title.validity.valueMissing) {
-    the_title.setCustomValidity("Please fill in all values");
+    the_title.setCustomValidity("Please enter a book title");
     the_title.reportValidity();
   } else {
     the_title.setCustomValidity("");
+  }
+});
+
+the_author.addEventListener("input", (event) => {
+  if(the_author.validity.valueMissing) {
+    the_author.setCustomValidity("Please enter a author name");
+    the_author.reportValidity();
+  } else {
+    the_author.setCustomValidity("");
   }
 });
